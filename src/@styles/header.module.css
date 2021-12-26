@@ -1,0 +1,28 @@
+.header {
+	background-color: var(--bg);
+	position: sticky;
+	top: 0;
+	padding: 20px 0;
+	z-index: 1000;
+}
+.grid {
+	display: grid;
+	grid-template-columns: auto minmax(100px, 1fr);
+	align-items: center;
+}
+.heading span {
+	color: var(--accent);
+}
+.newBtn {
+	background-color: var(--new);
+	color: var(--text);
+	padding: 5px;
+	border: none;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	border-radius: 5px;
+}
+.right {
+	text-align: right;
+}

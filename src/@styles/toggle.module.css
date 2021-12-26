@@ -1,0 +1,14 @@
+.container {
+	background-color: var(--bg2);
+	border-radius: 5px;
+	overflow: hidden;
+	display: inline-flex;
+}
+.item,
+.active {
+	padding: 5px 10px;
+	cursor: pointer;
+}
+.active {
+	background-color: var(--accent);
+}

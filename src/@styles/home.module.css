@@ -1,0 +1,91 @@
+.homeGrid,
+.detailGrid {
+	display: grid;
+	grid-template-columns: 70fr 30fr;
+	column-gap: 20px;
+	padding-bottom: 100px;
+}
+.card {
+	background-color: var(--bg2);
+	margin: 10px 0;
+	padding: 10px;
+	display: grid;
+	grid-template-columns: auto minmax(100px, 1fr);
+	align-items: center;
+	column-gap: 10px;
+	border-radius: 10px;
+}
+.card svg {
+	color: var(--accent);
+}
+.title {
+	display: block;
+	font-weight: bold;
+}
+.meta {
+	text-transform: uppercase;
+}
+
+.btnList {
+	display: grid;
+	grid-template-columns: repeat(3, 33.33fr);
+	column-gap: 10px;
+	margin: 10px 0;
+}
+.btnItem {
+	background-color: var(--bg2);
+	padding: 10px;
+	display: block;
+	text-align: center;
+	border-radius: 10px;
+	color: var(--text);
+	border: none;
+	cursor: pointer;
+}
+.btnItem span {
+	display: block;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+}
+.btnItem svg {
+	color: var(--accent);
+	font-size: 20pt;
+}
+.pagingContainer {
+	display: grid;
+	grid-template-columns: auto minmax(10px, 1fr) auto;
+	text-align: center;
+}
+
+.prevBtn,
+.currentPage,
+.nextBtn {
+	background-color: var(--bg2);
+	border: none;
+	color: var(--accent);
+	border-radius: 5px;
+	padding: 5px;
+	display: inline-flex;
+	cursor: pointer;
+}
+
+.currentPage {
+	font-weight: bold;
+	font-size: 14pt;
+	background-color: var(--accent);
+	color: var(--text);
+	padding: 5px 10px;
+	cursor: unset;
+}
+
+@media screen and ( max-width: 1000px ){
+	.homeGrid,
+	.detailGrid {
+		grid-template-columns: 1fr;
+		row-gap: 20px;
+	}
+	.detailGridFirst {
+		grid-row: 1;
+	}
+}

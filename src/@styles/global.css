@@ -1,0 +1,122 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--bg: #060818;
+	--bg2: #080c24;
+	--accent: #208ee3;
+	--new: var(--accent);
+	--text: #fffc;
+	--heading-text: #fffe;
+	--backdrop: #000a;
+}
+a {
+	color: var(--accent);
+	text-decoration: none;
+}
+body {
+	font-family: 'Quicksand', sans-serif;
+	background-color: var(--bg);
+	color: var(--text);
+	font-size: 12pt;
+	line-height: 1.5;
+}
+@media (pointer: fine) {
+	body::-webkit-scrollbar,
+	.ace_scrollbar::-webkit-scrollbar {
+	  width: 12px;
+	  height: 12px;
+	}
+	body,
+	.ace_scrollbar {
+	  scrollbar-width: thin;
+	  scrollbar-color: var(--accent) var(--bg2);
+	}
+	body::-webkit-scrollbar-track,
+	.ace_scrollbar::-webkit-scrollbar-track {
+	  background: var(--bg2);
+	}
+	body::-webkit-scrollbar-thumb,
+	.ace_scrollbar::-webkit-scrollbar-thumb {
+	  background-color: var(--accent) ;
+	  border-radius: 6px;
+	}
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--heading-text);
+}
+h2 {
+	color: var(--accent);
+	font-size: 28pt;
+}
+
+fieldset {
+	border: none;
+	margin: 20px 0;
+}
+fieldset label {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+fieldset label,
+fieldset input,
+fieldset textarea,
+fieldset select {
+	display: block;
+}
+fieldset input,
+fieldset textarea,
+fieldset select {
+	width: 100%;
+	padding: 10px;
+	background-color: var(--bg2);
+	border: none;
+	border-radius: 5px;
+	font-size: 12pt;
+	color: var(--text);
+}
+fieldset textarea {
+	height: 300px;
+}
+fieldset input:focus,
+fieldset textarea:focus {
+	outline: 1px solid var(--accent);
+}
+.button {
+	display: inline-flex;
+	align-items: center;
+	color: var(--text);
+	background-color: var(--accent);
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-size: 12pt;
+	border: none;
+	cursor: pointer;
+}
+.ace_editor {
+	width: 100% !important;
+	border-radius: 5px;
+	background-color: var(--bg2);
+}
+.ace_gutter {
+	background-color: var(--bg2) !important;
+	box-shadow: 2px 2px 10px #0005;
+}
+.ace_active-line,
+.ace_gutter-active-line {
+	background-color: #0002 !important;
+}

@@ -1,0 +1,72 @@
+.backdropBlock,
+.backdropBlockShow {
+	background-color: var(--backdrop);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: 1s;
+	z-index:1001;
+}
+.backdropBlockShow {
+	opacity: 1;
+	visibility: visible;
+}
+.vhCenter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 100%;
+}
+.loaderLogo {
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 28pt;
+}
+.loaderLogo span {
+	color: var(--accent);
+}
+.loadingContainer {
+	background-color: var(--bg2);
+	width: 100%;
+	max-width: 250px;
+	height: 10px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+}
+.loadingContainer.rounded {
+	border-radius: 10px;
+	margin: 10px auto;
+}
+.loadingContent {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 50px;
+	background-color: var(--accent);
+	animation: loader;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+}
+@keyframes loader {
+	0% {
+		left: -100%;
+		width: 100px;
+	}
+	50% {
+		left: 100%;
+		width: 50px;
+	}
+	100% {
+		left: -100%;
+		width: 100px;
+	}
+}
