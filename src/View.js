@@ -63,7 +63,7 @@ export default function View(){
 		.then(r=>r.json())
 		.then(j=>{
 			if(j.error){
-				alert.error(j.error);
+				alert.error(j.message);
 			}else{
 				setContent(j.content);
 			}

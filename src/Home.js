@@ -72,7 +72,7 @@ export default function Home(){
 		.then(r=>r.json())
 		.then(j=>{
 			if(j.error){
-				alert.error(j.error);
+				alert.error(j.message);
 			}else{
 				navigate('/'+j.id);
 			}
